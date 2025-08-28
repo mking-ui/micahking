@@ -1,0 +1,395 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons";
+
+/* ===============================
+   Global Styles & Theme
+=================================*/
+
+:root {
+  --primary-hue: 250;
+  --light-bg: hsl(var(--primary-hue), 40%, 98%);
+  --dark-bg: hsl(var(--primary-hue), 25%, 10%);
+  --light-text: #333;
+  --dark-text: #eee;
+  --accent: hsl(var(--primary-hue), 90%, 55%);
+}
+
+body.light-theme {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+body.dark-theme {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   Header
+=================================*/
+
+header {
+  background: var(--light-bg);
+  transition: background 0.3s ease;
+}
+body.dark-theme header {
+  background: var(--dark-bg);
+}
+
+header .nav-link {
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+header .nav-link:hover {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: inherit;
+}
+
+/* ===============================
+   Hero Section
+=================================*/
+
+.hero {
+  padding: 4rem 0;
+  background: var(--background-primary);
+  text-align: center;
+}
+
+.hero .h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.hero b {
+  color: var(--accent);
+  font-weight: inherit;
+}
+
+.hero .h3 {
+  color: var(--foreground-secondary);
+  margin-bottom: 2rem;
+}
+
+.hero .btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero .btn {
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Right Image & Shapes */
+.hero .right {
+  display: block;
+  position: relative;
+}
+
+.hero .img-box {
+  position: relative;
+  display: inline-block;
+}
+
+.hero .hero-img {
+  border-radius: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.hero .pattern-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent),
+    var(--accent) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.05;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.hero .shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero .shape-1 {
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  bottom: -20px;
+  right: -20px;
+  opacity: 0.2;
+}
+
+.hero .shape-2 {
+  width: 50px;
+  height: 50px;
+  background: var(--foreground-secondary);
+  top: -15px;
+  left: -15px;
+  opacity: 0.15;
+}
+
+
+/* ===============================
+   Blog Card
+=================================*/
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.card img {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.card .badge {
+  border-radius: 50px;
+}
+.card-title {
+  font-weight: 600;
+}
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Author block */
+.card .author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.card .author img {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.card .author small {
+  color: gray;
+}
+
+/* ===============================
+   Aside
+=================================*/
+
+.aside {
+  position: sticky;
+  top: 5rem;
+  margin-top: 3rem;
+}
+
+.aside section {
+  margin-bottom: 2rem;
+}
+
+.aside h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.aside ul li {
+  margin-bottom: 0.75rem;
+}
+
+.aside a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.aside a:hover {
+  color: var(--accent);
+}
+
+/* Newsletter box */
+.newsletter {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.03);
+}
+body.dark-theme .newsletter {
+  background: rgba(255,255,255,0.05);
+}
+
+/* ===============================
+   Footer
+=================================*/
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background: var(--light-bg);
+  transition: background 0.3s ease;
+}
+body.dark-theme footer {
+  background: var(--dark-bg);
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* ===============================
+   Buttons
+=================================*/
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background: hsl(var(--primary-hue), 90%, 45%);
+  border-color: hsl(var(--primary-hue), 90%, 45%);
+}
+
+/* ===============================
+   Responsive Tweaks
+=================================*/
+
+@media (max-width: 991px) {
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  header nav {
+    display: none;
+  }
+}
+/* ------------------------------
+   Portfolio Grid
+------------------------------- */
+/* ------------------------------
+   Portfolio Details Page
+------------------------------- */
+.portfolio-details {
+  padding-top: 40px;
+}
+
+/* Slider */
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 15px;
+  position: relative;
+  text-align: center;
+}
+
+.portfolio-details .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: var(--light-bg);
+  opacity: 1;
+  border: 2px solid var(--accent);
+  margin: 0 5px;
+}
+
+.portfolio-details .swiper-pagination-bullet-active {
+  background-color: var(--accent);
+}
+
+/* Project Info Box */
+.portfolio-info {
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--light-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: var(--light-text);
+}
+
+body.dark-theme .portfolio-info {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  color: inherit;
+}
+
+body.dark-theme .portfolio-info h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  color: inherit;
+}
+
+.portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.portfolio-description {
+  margin-top: 20px;
+  color: inherit;
+}
+
+.portfolio-description h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.portfolio-description p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: inherit;
+}

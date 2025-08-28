@@ -5,13 +5,13 @@ export default function Hero() {
         {/* Left Section */}
         <div className="left col-lg-6">
           <h1 className="h1 fw-bold">
-            Hi, I'm <b>micah&nbsp;king</b>.
+            Hi, I'm <b>MicahKing</b>.
             <br />
             Web Developer
           </h1>
 
           <p className="h3">
-            Specialized in <abbr title="Accessibility">a11y</abbr> and Core Web Vitals
+            Specialized in <abbr title="Accessibility">Frontend</abbr> and Core Web Vitals
           </p>
 
           <div className="btn-group mt-3">

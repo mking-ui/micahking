@@ -15,7 +15,7 @@ export default function Hero() {
           </p>
 
           <div className="btn-group mt-3">
-            <a href="#" className="btn btn-primary btn-lg">
+            <a href="/contact" className="btn btn-primary btn-lg">
               Contact Me <i className="bi bi-envelope-fill ms-2"></i>
             </a>
             <a href="#" className="btn btn-outline-secondary btn-lg">

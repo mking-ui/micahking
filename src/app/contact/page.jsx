@@ -19,7 +19,7 @@ export default function Contact() {
             <div className="card-body">
               <i className="bi bi-envelope-fill fs-1 text-primary mb-3"></i>
               <h5>Email</h5>
-              <p className="text-muted">owner@example.com</p>
+              <p className="text-muted">micahenoch3@gmail.com</p>
               <Link
                 href="mailto:micahenoch3@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you"
                 className="btn btn-primary"
@@ -36,9 +36,9 @@ export default function Contact() {
             <div className="card-body">
               <i className="bi bi-whatsapp fs-1 text-success mb-3"></i>
               <h5>WhatsApp</h5>
-              <p className="text-muted">+23490766102</p>
+              <p className="text-muted">+234 907 676 1102</p>
               <Link
-                href="https://wa.me/23490766102"
+                href="https://wa.me/2349076761102"
                 target="_blank"
                 className="btn btn-success"
               >
@@ -54,8 +54,8 @@ export default function Contact() {
             <div className="card-body">
               <i className="bi bi-telephone-fill fs-1 text-info mb-3"></i>
               <h5>Phone</h5>
-              <p className="text-muted">090766102</p>
-              <Link href="tel:090766102" className="btn btn-info text-white">
+              <p className="text-muted">+234 907 676 1102</p>
+              <Link href="tel:+234 9076761102" className="btn btn-info text-white">
                 Call Now
               </Link>
             </div>

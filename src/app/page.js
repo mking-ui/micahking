@@ -1,14 +1,15 @@
-import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
 import BlogList from "@/components/BlogList";
 import Aside from "@/components/Aside";
 import Footer from "@/components/Footer";
 import ProjectsPage from "./projects/page";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   return (
     <>
-      <Header />
+     <Navbar/>
       <main className="container my-5">
         <div className="row g-5">
           <div className="col-lg-12">

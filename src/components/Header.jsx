@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="py-3 border-bottom sticky-top">
+    <header className="py-3  sticky-top">
       <div className="container d-flex justify-content-between align-items-center">
         <h2 className="fw-bold m-0">micah<span className="text-warning fw-light">king</span></h2>
         <nav className="d-none d-lg-flex gap-4">

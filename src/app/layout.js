@@ -10,6 +10,9 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
 
   return (
     <html lang="en">
